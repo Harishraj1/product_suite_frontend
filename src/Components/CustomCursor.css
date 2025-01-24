@@ -1,0 +1,39 @@
+/* Base style for both circles */
+.outer-circle, .inner-circle {
+    position: fixed;
+    pointer-events: none; /* Prevent interference with mouse events */
+    border-radius: 50%;
+    transition: ease;
+}
+
+/* Outer circle (larger circle) */
+.outer-circle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #989898;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+    z-index: 100;
+    transition: ease;
+}
+
+/* Inner circle (smaller circle) */
+.inner-circle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #989898;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .10s;
+    z-index: 100;
+    transition: ease;
+}

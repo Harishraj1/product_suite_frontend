@@ -1,0 +1,221 @@
+/* Typewriter effect styling */
+.typewriter-text {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Blinking cursor animation */
+@keyframes blinkCursor {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+/* Divider placement adjustments */
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-15px);
+        /* Moves up by 15px */
+    }
+
+    40% {
+        transform: translateY(0);
+        /* Back to original position */
+    }
+
+    60% {
+        transform: translateY(-8px);
+        /* Moves slightly up */
+    }
+
+    80% {
+        transform: translateY(0);
+        /* Back to original position */
+    }
+}
+
+/* Applying the bounce animation with delays */
+.bounce-animation {
+    animation: bounce 5s ease-in-out infinite;
+    /* 2s duration, ease-in-out for smoothness */
+}
+
+.bounce-animation-1 {
+    animation-delay: 0s;
+    /* No delay */
+}
+
+.bounce-animation-2 {
+    animation-delay: 0.5s;
+    /* Delay for 0.5 seconds */
+}
+
+.bounce-animation-3 {
+    animation-delay: 1s;
+    /* Delay for 1 second */
+}
+
+.bounce-animation-4 {
+    animation-delay: 1.5s;
+    /* Delay for 1.5 seconds */
+}
+
+.mySwiper {
+    height: 50%;
+    /* Adjust as needed */
+}
+
+.mySwiper img {
+    border-radius: 10px;
+    /* Optional: round the corners of images */
+}
+
+.custom-pagination {
+    /* Adjust this value to move pagination dots further up or down */
+    text-align: center;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    background-color: #000;
+    /* Change pagination dot color */
+    width: 12px;
+    height: 12px;
+}
+
+/* Style for the arrow buttons */
+.arrows-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Adjust as necessary */
+    width: 30%;
+}
+
+.arrow-button {
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0px 18px;
+    transition: color 0.3s ease;
+
+}
+
+.arrow-button:hover {
+    color: gray;
+    /* Color change on hover */
+}
+
+/* Positioning for left and right arrows */
+.left-arrow {
+    margin-right: 20px;
+}
+
+.right-arrow {
+    margin-left: 20px;
+}
+
+.small_imgs {
+    display: none;
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+
+    /* Center-align the text and heading */
+    .flex {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .typewriter-text {
+        font-size: 2rem;
+    }
+
+    /* Make sure the text and heading are centered */
+    .w-full {
+        text-align: center;
+    }
+
+    /* Hide the Swiper and animation containers */
+    .mySwiper {
+        display: none;
+        /* Hides Swiper container */
+    }
+
+    .bounce-animation {
+        display: none;
+    }
+
+    /* Hide the arrow buttons on mobile */
+    .arrows-container {
+        display: none;
+        /* Hides the arrows */
+    }
+
+    /* Adjust padding for smaller screens */
+    .px-36 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Make product heading smaller */
+    .product_heading {
+        font-size: 2rem;
+        margin-top: 10%;
+    }
+
+    /* Show the medium screen image container on mobile */
+    .small_imgs {
+        display: block;
+        /* Ensures image container is visible */
+        width: 100%;
+        height: 150px; /* Adjust based on your needs */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .smallScreen_scroll {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: max-content;
+        animation: scroll 10s linear infinite;
+        
+    }
+    .smallScreen_scroll img {
+        width: 300px; /* Adjust based on your needs */
+        height: auto;
+        margin-right: 20px;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-80%);
+        }
+    }
+}
